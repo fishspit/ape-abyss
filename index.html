@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APE ABYSS - Coming Soon</title>
+
+  <!-- Font Awesome 6 Core CSS via jsDelivr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  
+  <!-- Optional: Font Awesome Animation CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome-animation@1.1.1/css/font-awesome-animation.min.css" />
+
+  <!-- Google Font: Orbitron for a modern gaming vibe -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="APE ABYSS Logo" />
+    </div>
+    
+    <!-- Countdown Timer with Frame -->
+    <div class="countdown-container">
+      <img src="assets/images/countdown.png" alt="Countdown Frame" class="countdown-frame" />
+      <div id="countdown" class="countdown-text"></div>
+    </div>
+    
+    <!-- Beta Sign-Up Form Under Countdown -->
+    <div class="beta-signup">
+      <form id="betaForm" action="https://formspree.io/f/xqapwlnd" method="POST">
+        <input type="hidden" name="_subject" value="New Beta Signup!">
+        <input type="email" name="email" placeholder="Enter e-mail here" required>
+        <button type="submit">Register for Alpha Testing</button>
+      </form>
+    </div>
+    
+    
+    
+    
+    <!-- COMING SOON Message -->
+    <h2>COMING SOON ON</h2>
+    
+    <!-- Platform Icons -->
+    <div class="icons-group">
+      <a href="https://store.steampowered.com" target="_blank" title="Steam">
+        <i class="fa-brands fa-steam"></i>
+      </a>
+      <a href="https://about.meta.com" target="_blank" title="Meta">
+        <i class="fa-brands fa-meta"></i>
+      </a>
+    </div>
+    
+    <!-- Update Text -->
+    <div class="updates">FOR UPDATES FOLLOW</div>
+    
+    <!-- Social Media Icons Group -->
+    <div class="social-icons-group">
+      <a href="https://discord.com" target="_blank" title="Discord">
+        <i class="fa-brands fa-discord"></i>
+      </a>
+      <a href="https://www.youtube.com/@j-vr" target="_blank" title="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+    
+    <!-- JVR Logo -->
+    <div class="jvr_logo">
+      <img src="assets/images/jvr_logo.png" alt="JVR Logo" />
+    </div>
+  </div>
+  
+  <!-- Cosmic Lights Overlay (Pulsating over everything) -->
+  <div class="cosmic-overlay">
+    <!-- Original cosmic lights -->
+    <div class="cosmic-light" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+    <div class="cosmic-light" style="top: 60%; left: 70%; animation-delay: 1s;"></div>
+    <div class="cosmic-light" style="top: 80%; left: 30%; animation-delay: 2s;"></div>
+    <div class="cosmic-light" style="top: 30%; left: 80%; animation-delay: 3s;"></div>
+    <!-- Additional randomly placed cosmic lights -->
+    <div class="cosmic-light cyan" style="top: 12%; left: 10%; animation-delay: 0.2s;"></div>
+    <div class="cosmic-light purple" style="top: 25%; left: 80%; animation-delay: 0.8s;"></div>
+    <div class="cosmic-light cyan" style="top: 45%; left: 30%; animation-delay: 1.2s;"></div>
+    <div class="cosmic-light purple" style="top: 55%; left: 50%; animation-delay: 1.6s;"></div>
+    <div class="cosmic-light cyan" style="top: 70%; left: 20%; animation-delay: 2s;"></div>
+    <div class="cosmic-light purple" style="top: 85%; left: 60%; animation-delay: 2.4s;"></div>
+    <div class="cosmic-light cyan" style="top: 15%; left: 90%; animation-delay: 2.8s;"></div>
+    <div class="cosmic-light purple" style="top: 40%; left: 10%; animation-delay: 3.2s;"></div>
+    <div class="cosmic-light cyan" style="top: 80%; left: 80%; animation-delay: 3.6s;"></div>
+    <div class="cosmic-light purple" style="top: 50%; left: 90%; animation-delay: 4s;"></div>
+  </div>
+  
+  <!-- Static Overlay (TV static effect) -->
+  <div class="static-overlay"></div>
+  
+  <!-- Audio Element: Plays a sound file -->
+  <audio id="background-audio" loop autoplay>
+    <source src="assets/audio/sound.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+  
+  <!-- Main JavaScript -->
+  <script src="src/js/script.js"></script>
+</body>
+</html>

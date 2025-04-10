@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You - APE ABYSS</title>
+  
+  <!-- Font Awesome 6 Core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <!-- Main CSS (shared with the landing page) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Additional styles for the thank-you page -->
+  <style>
+    /* Ensure body background and positioning is consistent */
+    body {
+      background-color: #000;
+      overflow: hidden;
+      position: relative;
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+    }
+    
+    /* Main container for thank-you message */
+    .thank-you-container {
+      position: relative;
+      z-index: 10; /* Above the overlays */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+    }
+    
+    .thank-you-container h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      color: #ff4136; /* A deep, ominous red */
+      text-shadow: 0 0 20px #ff4136;
+      animation: flicker 2s infinite alternate;
+    }
+    
+    .thank-you-container .notify_message {
+      font-family: "Roboto", sans-serif;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+    
+    .thank-you-container .ad {
+      font-family: "Roboto", sans-serif;
+      font-size: 2.5em;
+    }
+    
+    .thank-you-container a {
+      color: #4ecdff;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s;
+    }
+    
+    .thank-you-container a:hover {
+      border-bottom: 2px solid #4ecdff;
+    }
+    
+    /* Flickering animation to add an eerie effect */
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0.4;
+      }
+    }
+    
+    .back-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  color: #4ecdff;
+  transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 11; /* Ensure it's higher than overlays */
+}
+
+    
+    .back-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateX(-50%) scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Cosmic Lights Overlay -->
+  <div class="cosmic-overlay">
+    <!-- Adjust positions and delays as desired -->
+    <div class="cosmic-light" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
+    <div class="cosmic-light" style="top: 65%; left: 70%; animation-delay: 1s;"></div>
+    <div class="cosmic-light" style="top: 75%; left: 30%; animation-delay: 2s;"></div>
+    <div class="cosmic-light" style="top: 35%; left: 80%; animation-delay: 3s;"></div>
+    <div class="cosmic-light cyan" style="top: 20%; left: 5%; animation-delay: 0.5s;"></div>
+    <div class="cosmic-light purple" style="top: 50%; left: 90%; animation-delay: 1.5s;"></div>
+  </div>
+  
+  <!-- Static Overlay (TV static effect) -->
+  <div class="static-overlay"></div>
+  
+  <!-- Main Content Container -->
+  <div class="thank-you-container">
+    <h1>Thanks for registering!</h1>
+    <div class="notify_message">We'll send you an e-mail if you're selected for Alpha testing.</div>
+    <div class="ad">Check out <a href="https://www.youtube.com/@j-vr" target="_blank">J-VR's YouTube</a> for updates and videos!</div>
+  </div>
+  
+  <!-- Back Button -->
+  <button class="back-button" onclick="window.location.href='index.html';">
+    <i class="fa-solid fa-home"></i> Home
+  </button>
+</body>
+</html>

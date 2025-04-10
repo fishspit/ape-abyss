@@ -1,0 +1,212 @@
+/* RESET / BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  min-height: 100vh;
+}
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* MAIN CONTENT CONTAINER */
+.container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* LOGO STYLING WITH PULSING ANIMATION */
+.logo img {
+  max-width: 70%;
+  height: auto;
+  margin: 0 0 -80px 0;
+  animation: logoPulse 6s ease-in-out infinite;
+}
+@keyframes logoPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* JVR LOGO */
+.jvr_logo img {
+  max-width: 15%;
+  height: auto;
+}
+
+/* COUNTDOWN CONTAINER & FRAME */
+.countdown-container {
+  position: relative;
+  width: 550px;
+  margin: 5px 0;
+  display: inline-block;
+}
+.countdown-frame {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.countdown-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  animation: cosmicColor 1s linear infinite;
+}
+@keyframes cosmicColor {
+  0%   { color: #a6211b; }
+  33%  { color: #4ecdff; }
+  66%  { color: #ff2217; }
+  100% { color: #a6211b; }
+}
+
+/* COMING SOON */
+h2 {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin: 15px 5px 5px 5px;
+}
+
+/* UPDATES TEXT */
+.updates {
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  margin: 25px 5px 5px 5px;
+}
+
+/* PLATFORM & SOCIAL ICONS */
+.icons-group,
+.social-icons-group {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 5px 5px;
+}
+.icons-group a,
+.social-icons-group a {
+  margin: 0 25px 5px 5px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.icons-group a:hover,
+.social-icons-group a:hover {
+  transform: scale(1.2);
+}
+.icons-group i {
+  color: #e72c22 !important;
+  font-size: 2.5rem;
+}
+.social-icons-group i {
+  color: #4ecdff !important;
+  font-size: 2.5rem;
+}
+
+/* BETA SIGNUP FORM */
+.beta-signup {
+  margin: 20px 0;
+}
+.beta-signup form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+.beta-signup input[type="email"] {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 10px;
+  color: #fff;
+  font-size: 1rem;
+  flex: 1;
+}
+.beta-signup button {
+  background: #a6211b;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+.beta-signup button:hover {
+  background: #ff3e2e;
+}
+
+/* COSMIC LIGHTS OVERLAY */
+.cosmic-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+}
+.cosmic-light {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(98, 0, 255, 0.6) 0%, rgba(1, 19, 26, 0) 80%);
+  width: 350px;
+  height: 350px;
+  filter: blur(8px);
+  mix-blend-mode: screen;
+  animation: cosmicPulse 6s ease-in-out infinite;
+}
+.cosmic-light.cyan {
+  background: radial-gradient(circle, rgba(0,255,255,0.6) 0%, rgba(0,90,90,0) 80%);
+}
+.cosmic-light.purple {
+  background: radial-gradient(circle, rgba(138,43,226,0.6) 0%, rgba(80,0,80,0) 80%);
+}
+@keyframes cosmicPulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.2;
+  }
+}
+
+/* STATIC OVERLAY */
+.static-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+  /* Since this CSS file is in assets/css, update the relative path to the GIF */
+  background: url("../gifs/static.gif");
+  opacity: 0.05;
+}
